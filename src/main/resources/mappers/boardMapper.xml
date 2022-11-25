@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+	<!-- 공지사항 목록 -->
+	<select id="boardList" resultType="com.the.dto.BoardDTO">
+		select * from board order by regdate desc
+	</select>
+	<!-- 글 상세보기 -->
+	<select id="boardDetail" resultType="com.the.dto.BoardDTO">
+		select * from board where seq=#{seq}
+	</select>
+	<!-- 글 수 카운트 -->
+	<select id="totalCount" resultType="integer" >
+		select count(*) from board
+	</select>
+	<!-- 수정하기-->
+	<select id="updateBoard">
+		update board title=#{title}, content=#{content} where seq=#{seq}
+	</select>	
+	<!-- 글 쓰기 -->
+	<select id="insertBoard">
+		insert into board values(select nvl(max(seq), 0)+1 from board), #{title}, #{content}, '관리자', sysdate, 0)
+	</select>	
+	<!-- 글 삭제 -->
+	<select id="delBoard">
+		delete table board where seq=#{seq}
+	</select>	
+</mapper>
