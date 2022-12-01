@@ -14,7 +14,7 @@ public class LombokTest {
 		SampleDTO dto = new SampleDTO();
 		dto.setName("김도연");
 		dto.setAge(18);
-		dto.setIq(130.2);
+		dto.setVcnt(0);
 
 		logger.info(dto.toString());
 	}

@@ -10,5 +10,5 @@ public interface BoardService {
 	public void boardInsert(BoardDTO dto) throws Exception;
 	public void boardDelete(int seq) throws Exception;
 	public void boardUpdate(BoardDTO dto) throws Exception;
-}
 
+}

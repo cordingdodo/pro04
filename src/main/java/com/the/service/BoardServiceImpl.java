@@ -9,37 +9,40 @@ import com.the.dao.BoardDAO;
 import com.the.dto.BoardDTO;
 
 @Service
-public class BoardServiceImpl implements BoardService{
+public class BoardServiceImpl implements BoardService {
 	
 	@Autowired
-	BoardDAO boardDao;
+	private BoardDAO boardDAO;
 
 	@Override
 	public List<BoardDTO> boardList() throws Exception {
-		return boardDao.boardList();
+		return boardDAO.boardList();
 	}
 
 	@Override
 	public BoardDTO boardDetail(int seq) throws Exception {
-		return boardDao.boardDetail(seq);
+		return boardDAO.boardDetail(seq);
 	}
 
 	@Override
 	public void boardInsert(BoardDTO dto) throws Exception {
-		boardDao.boardInsert(dto);
+		boardDAO.boardInsert(dto);
 		
 	}
 
 	@Override
 	public void boardDelete(int seq) throws Exception {
-		boardDao.boardDelete(seq);
+		boardDAO.boardDelete(seq);
 		
 	}
 
 	@Override
 	public void boardUpdate(BoardDTO dto) throws Exception {
-		boardDao.boardUpdate(dto);
+		boardDAO.boardUpdate(dto);
 		
 	}
+
+
+	}
 	
-}
+

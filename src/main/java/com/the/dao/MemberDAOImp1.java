@@ -19,9 +19,22 @@ public class MemberDAOImp1 implements MemberDAO {
 		return sqlSession.selectList("member.memberList");
 	}
 
+	//회원 정보 보기
 	@Override
 	public MemberDTO getMember(String id) throws Exception {
 		return sqlSession.selectOne("member.getMember", id);
+	}
+
+	//회원가입
+	@Override
+	public void memberInsert(MemberDTO dto) throws Exception {
+			sqlSession.insert("member.memberInsert", dto);
+		
+	}
+
+	@Override
+	public MemberDTO signIn(MemberDTO mdto) throws Exception {
+		return sqlSession.selectOne("member.signIn", mdto);
 	}
 	
 }

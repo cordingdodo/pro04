@@ -7,6 +7,15 @@
 	<select id="getMember" resultType="com.the.dto.MemberDTO">
 	select * from member where id=#{id}
 	</select>
+	<!-- 회원 가입 : dao에서 insert("member.memberInsert",mdto) -->
+	<insert id="memberInsert">
+	insert into member values(#{id}, #{pw}, #{name}, #{email}, #{tel}, #{addr1}, #{addr2}, #{postcode}, #{birth}, now(), 0, 0)
+	</insert>
+	
+	<!-- 로그인 / 컨트롤러에서 세션처리 -->
+	<select id="siginIn" resultType="com.the.dto.MemberDTO">
+			select * from member where id = #{id }
+	</select>
 </mapper>
 <!--  다른데서는 ArrayList<MemberDTO> memList = sample.mameberList(); 라고 실행 -->
 <!-- namespace나 해당 명령의 id는 중복되면 절대 안 됨 -->

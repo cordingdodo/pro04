@@ -7,24 +7,34 @@
 	<select id="boardList" resultType="com.the.dto.BoardDTO">
 		select * from board order by regdate desc
 	</select>
+	
 	<!-- 글 상세보기 -->
 	<select id="boardDetail" resultType="com.the.dto.BoardDTO">
 		select * from board where seq=#{seq}
 	</select>
+	
 	<!-- 글 수 카운트 -->
 	<select id="totalCount" resultType="integer" >
 		select count(*) from board
 	</select>
+	
 	<!-- 수정하기-->
-	<select id="updateBoard">
+	<update id="boardUpdate">
 		update board title=#{title}, content=#{content} where seq=#{seq}
-	</select>	
+	</update>
+		
 	<!-- 글 쓰기 -->
-	<select id="insertBoard">
-		insert into board values(select nvl(max(seq), 0)+1 from board), #{title}, #{content}, '관리자', sysdate, 0)
-	</select>	
+	<insert id="boardInsert">
+		insert into board(title, content, author, regdate, visited) values(#{title}, #{content}, '관리자', now(), 0)
+	</insert>	
+	
 	<!-- 글 삭제 -->
-	<select id="delBoard">
-		delete table board where seq=#{seq}
-	</select>	
+	<delete id="boardDelete">
+		delete from board where seq=#{seq}
+	</delete>
+	
+	<!-- 조회수 추가 -->	
+	<update id="countUp">
+		update board set visited=visited+1 where seq=#{seq}
+	</update>
 </mapper>

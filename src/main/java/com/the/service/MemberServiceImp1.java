@@ -25,6 +25,20 @@ public class MemberServiceImp1 implements MemberService {
 	public MemberDTO getMember(String id) throws Exception {
 		return memberDao.getMember(id);
 	}
+
+
+	@Override
+	public void memberInsert(MemberDTO dto) throws Exception {
+		memberDao.memberInsert(dto);
+		
+	}
+
+	//컨트롤러에서 로그인 처리
+	@Override
+	public MemberDTO signIn(MemberDTO mdto) throws Exception {
+		return memberDao.signIn(mdto);
+	}
+	
 	
 
 }

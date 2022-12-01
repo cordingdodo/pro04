@@ -10,9 +10,9 @@ import com.the.dto.BoardDTO;
 
 @Repository
 public class BoardDAOImpl implements BoardDAO {
-		
+	
 	@Autowired
-	SqlSession sqlSession;
+	private SqlSession sqlSession;
 
 	@Override
 	public List<BoardDTO> boardList() throws Exception {
@@ -20,27 +20,27 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 
 	@Override
-	public BoardDTO boardDetail(int seq) throws Exception {		
+	public BoardDTO boardDetail(int seq) throws Exception {
 		return sqlSession.selectOne("board.boardDetail", seq);
 	}
 
 	@Override
 	public void boardInsert(BoardDTO dto) throws Exception {
-		sqlSession.insert("board.boardInsert", dto);
+			sqlSession.insert("board.boardInsert", dto);
+		
 	}
 
 	@Override
 	public void boardDelete(int seq) throws Exception {
-		sqlSession.delete("board.boardDelete", seq);
+		 sqlSession.delete("board.boardDelete", seq);
 		
 	}
 
 	@Override
 	public void boardUpdate(BoardDTO dto) throws Exception {
-		sqlSession.update("board.boardUpdate", dto);
+			sqlSession.update("board.boardUpdate", dto);
 		
 	}
-	
-	
 
+	
 }

@@ -18,15 +18,22 @@ public class JDBCConn {
 			e.printStackTrace();
 		} 
 	}
-	
-	@Test
-	public void testConnection() {
-		try {
-			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");		
-			logger .info("오라클 연결 성공");
-		}	catch(Exception e) {
-			fail("Not yet implemented");
-		}
+	/*
+	 * @Test public void testConnection() { try { Connection conn =
+	 * DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system",
+	 * "1234"); logger .info("오라클 연결 성공"); } catch(Exception e) {
+	 * fail("Not yet implemented"); }
+	 */
+		
+		@Test
+		public void testConnection() {
+			try {
+				Connection conn = DriverManager.getConnection("jdbc:mysql:thin:@localhost:3306:xe","root","a1234");		
+				logger .info("오라클 연결 성공");
+			}	catch(Exception e) {
+				fail("Not yet implemented");
+			}
+
 
 	}
 	

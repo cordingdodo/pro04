@@ -16,7 +16,7 @@ public class DTOTest {
 		dto.setPw("123");
 		dto.setName("도도");
 		dto.setTel("010-9999-9999");
-		dto.setAddr("도도시 도도구 도도동");
+		dto.setAddr1("도도시 도도구 도도동");
 		dto.setRegdate("2022-11-23");
 		dto.setPt(100);
 		
