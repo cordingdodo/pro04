@@ -47,7 +47,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th style="background-color:#dcdcdc">비밀번호</th>
+							<th style="background-color:#dcdcdc">비밀번호 확인</th>
 							<td>
 								<input type="password" name="pw2" id="pw2" placeholder="비밀번호 확인 입력" maxlength="30"required>
 							</td>

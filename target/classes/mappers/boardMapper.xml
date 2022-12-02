@@ -37,4 +37,8 @@
 	<update id="countUp">
 		update board set visited=visited+1 where seq=#{seq}
 	</update>
+	
+
+	
+
 </mapper>

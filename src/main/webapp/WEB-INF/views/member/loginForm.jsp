@@ -2,6 +2,7 @@
     <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="path1" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html>
 <head>

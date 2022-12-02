@@ -2,13 +2,18 @@ use myshop1;
 
 delete from board where seq=1;
 user pro04;
-delete member where id=admin;
+DELETE FROM member WHERE id='admin';
+
+
 
 create table sample(id varchar(10), age int, vcnt int);
 insert into sample values('abc', 1, 0);
 insert into sample values('aaa', 11, 0);
 insert into sample values('vvc', 12, 0);
 
+select id, pw, name from member where id='admin';
+
+delete from member where id='kdy';
 select * from member;
 desc member;
 alter table member modify pw varchar(100);
