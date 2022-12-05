@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="free">
+	<!-- 자유게시판 목록 -->
+	<select id="freeList" resultType="com.the.dto.FreeDTO">
+		select * from free order by regdate desc
+	</select>
+	<!-- 자유게시판 상세보기 목록 -->
+	<select id="freeDetail" resultType="com.the.dto.FreeDTO">
+		select * from free where bno=#{bno}
+	</select>
+	<!-- 자유게시판 글쓰기 -->
+	<insert id="freeInsert">
+		insert into free(title, content, id) values(#{title}, #{content}, #{id})
+	</insert>
+	<!-- 자유게시판 수정하기 -->
+	<update id="freeEdit">
+		update free set title =#{title}, content =#{content} where bno=#{bno}
+	</update>	
+	<!-- 조회수 증가 -->
+	<update id="visitCount">
+		update free set visited=visited+1 where bno=#{bno}
+	</update>
+</mapper>
+<!--  다른데서는 ArrayList<MemberDTO> memList = sample.mameberList(); 라고 실행 -->
+<!-- namespace나 해당 명령의 id는 중복되면 절대 안 됨 -->
+	

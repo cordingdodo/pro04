@@ -36,7 +36,10 @@
 		      		</tr>
 		      		<tr>
 		      			<th style="background-color:#dcdcdc">글 내용</th>
-		      			<td>
+		      			<td>			 
+		      					<script>
+			      				CKEDITOR.replace('content',	{filebrowserUploadUrl:'/free/imageUpload.do'});
+			      				</script>
 		      				<textarea name="content" id="content" placeholder="내용 입력" rows="10" cols="100"  maxlength="1000" required></textarea>
 		      			</td>
 		      		</tr>

@@ -16,6 +16,13 @@
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/hd.jsp"></jsp:include>
 </head>
+<style>
+.container {
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+}
+</style>
 <body>
 	<header id="header">
 		<!-- 헤더 부분 인클루드 -->

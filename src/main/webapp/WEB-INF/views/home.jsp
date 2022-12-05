@@ -59,7 +59,6 @@
     </button>
     <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
     <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
   </nav>
 </div>
       </div>

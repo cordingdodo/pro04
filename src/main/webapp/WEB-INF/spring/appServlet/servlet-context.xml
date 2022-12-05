@@ -20,7 +20,7 @@
 	<resources mapping="/board/**" location="/WEB-INF/views/board" />
 	<resources mapping="/member/**" location="/WEB-INF/views/member" />
 	<resources mapping="/reservate/**" location="/WEB-INF/views/reservate" />
-	<resources mapping="/qna/**" location="/WEB-INF/views/qna" />
+	<resources mapping="/free/**" location="/WEB-INF/views/free" />
 	<resources mapping="/databank/**" location="/WEB-INF/views/databank" />
 	<resources mapping="/until/**" location="/WEB-INF/views/until" />
 	<resources mapping="/sample/**" location="/WEB-INF/views/sample" />

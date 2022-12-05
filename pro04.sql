@@ -48,9 +48,23 @@ insert into board(title, content, author) values('테스트글 9입니다', '테
 insert into board(title, content, author) values('테스트글 10입니다', '테스트 글 내용입니다', '관리자');
 insert into board(title, content, author) values('테스트글 11입니다', '테스트 글 내용입니다', '관리자');
 
+insert into free(title, content, id) values('자유게시판 테스트1입니다', '테스트 글 내용입니다', '관리자');
+insert into free(title, content, id) values('자유게시판 테스트2입니다', '테스트 글 내용입니다', '관리자');
+insert into free(title, content, id) values('자유게시판 테스트3입니다', '테스트 글 내용입니다', '관리자');
+
 alter table member add column email varchar(50);
 
 commit;
 
-select * from board;
+UPDATE free set title = '자유게시판 게시물1입니다', content = '글 내용입니다' where bno=1;
+
+select * from free;
 drop table board;
+
+ create table free(
+    bno int auto_increment primary key, 
+    title varchar(30) not null,
+    content varchar(1000) not null,
+    id varchar(20), 
+    regdate datetime default now(), 
+    visited int); 

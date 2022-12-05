@@ -61,7 +61,10 @@ public class BoardController {
 	
 	@GetMapping("update.do")
 	public String UpdateForm(HttpServletRequest request, Model model) throws Exception {
-			return "board/boardUpdate";
+			int seq = Integer.parseInt(request.getParameter("seq"));
+			BoardDTO dto = boardService.boardDetail(seq);
+			model.addAttribute("dto", dto);
+			return "board/boardEdit";
 		
 	}
 	
