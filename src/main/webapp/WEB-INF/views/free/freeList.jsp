@@ -18,11 +18,9 @@
 <jsp:include page="../include/hd.jsp"></jsp:include>
 </head>
 <style>
-.container {
-    clear: both;
-    width: 1000px;
-    margin: 0 auto;
-}
+.container { clear: both; width: 1000px; margin: 0 auto;}
+#con1 { font-size: 30px; padding-top: 20px; }
+h2.con1 { font-size: 30px; padding-top: 20px; }
 </style>
 <body>
 	<header id ="header">
@@ -31,7 +29,7 @@
 	</header>
 	<div class="content" id="content">
 		 <div class="row column text-center">
-			<h2>자유 게시판</h2>
+			<h2 class="con1">자유 게시판</h2>
 			<hr>
 			<br>
 		<div class="container">

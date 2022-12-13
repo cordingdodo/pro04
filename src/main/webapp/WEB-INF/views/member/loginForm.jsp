@@ -14,12 +14,10 @@
 <jsp:include page="../include/hd.jsp"></jsp:include>
 </head>
 <style>
-#id, #pw { 
-	margin: 10px auto;
-    width: 700px;
-}
+#id, #pw { 	margin: 10px auto;  width: 700px;}
+#button { padding-top:20px;}
+#h2 {font-size: 30px; padding-top: 20px;}
 
-#button { padding-top:20px;]}
     
 </style>
 	
@@ -27,7 +25,7 @@
 <jsp:include page="../include/header.jsp"></jsp:include>
 <div class="content" id="con">
 	<div class="row column text-center">
-		<h2 class="h2">로그인</h2>
+		<h2 id="h2">로그인</h2>
 		<hr>
 		<div class="container">
 			<form action="${path1 }/member/signin.do" method="post" name="loginForm">

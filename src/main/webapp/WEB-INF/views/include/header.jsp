@@ -12,9 +12,9 @@
    	 <!-- <button class="menu-icon" type="button" data-toggle="responsive-menu"></button> -->
      <ul class="dropdown menu" data-dropdown-menu>
        <li class="menu-text"><a href="${path8 }/"><img src="https://www.theventi.co.kr/new/upload/frlogo/1848617922_lRpgiVKn_20220820101046.png" style="width:100px; float:left;"/></a></li>
-       <li><a href="#">BRAND</a></li>
-       <li><a href="#">MENU</a></li>
-       <li><a href="#">STORE</a></li>
+       <li><a href="${path8 }/brand/brand.do">BRAND</a></li>
+       <li><a href="${path8 }/menu/menu.do">MENU</a></li>
+       <li><a href="${path8 }/store/store.do">STORE</a></li>
   	   <li><a href="#">MEMBERSHIP</a></li>       
        <li class="has-submenu">
 			<a href="#">COMMUNITY</a>

@@ -13,14 +13,14 @@
 	<jsp:include page="../include/hd.jsp"></jsp:include>
 </head>
 <style>
-
+#h2 {font-size: 30px; padding-top: 20px;}
 </style>
 	
 <body>
 <jsp:include page="../include/header.jsp"></jsp:include>
 <div class="content" id="con">
 	<div class="row column text-center">
-		<h2 class="h2">회원 가입</h2>
+		<h2 id="h2">회원 가입</h2>
 		<hr>
 		<div class="container">
 			<form action="${path1 }/member/insert.do" id="frm1" name="frm1" method="post">

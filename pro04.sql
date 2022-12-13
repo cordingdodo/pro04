@@ -1,15 +1,19 @@
 use myshop1;
+use shop;
 
 delete from board where seq=1;
 user pro04;
 DELETE FROM member WHERE id='admin';
 
+select * from test;
+select * from sample;
+create table test(id varchar(10), pw varchar(20));
 
 
-create table sample(id varchar(10), age int, vcnt int);
-insert into sample values('abc', 1, 0);
-insert into sample values('aaa', 11, 0);
-insert into sample values('vvc', 12, 0);
+create table sample(id varchar(10), pw varchar(20));
+insert into test values('abc', '1234');
+insert into test values('aaa', '11');
+insert into test values('vvc', '12');
 
 select id, pw, name from member where id='admin';
 
